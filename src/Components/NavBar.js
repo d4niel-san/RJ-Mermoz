@@ -1,20 +1,51 @@
 import './NavBar.css';
-import Button from '@mui/material/Button';
 
+import styled from 'styled-components';
 
-export const NavBar = () => {
-    return (
-        < nav >
-            <hr />
-            <ul className="MenuItems">
-                <Button variant="contained">Hello World</Button>
-                <li>Pagina Principal</li>
-                <li>Productos</li>
-                <li>Redes</li>
-                <li>Contacto</li>
-                <li>Ingresar</li>
-            </ul>
-            <hr />
-        </nav >
-    )
+const LiStyle = styled.li`
+  list-style: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-bottom: 1px solid transparent;
+  &:hover {
+    border-color: white;
+    //font-weight: 700;
+    font-style: italic;
+  }
+`
+
+const NavBarStyle = styled.nav`
+  border: 1px solid #111555;
+  border-left: none; 
+  border-right: none;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #137796;
+
+  ul{
+    display: flex; //horizontal
+    flex-direction: row; //eje por el cual toma la direccion el flex
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    }
+  }
+  
+`
+
+export const NavBarMenu = () => {
+  return (
+    < NavBarStyle >
+      <ul>
+        <LiStyle>Pagina Principal</LiStyle>
+        <LiStyle>Productos</LiStyle>
+        <LiStyle>Redes</LiStyle>
+        <LiStyle>Contacto</LiStyle>
+        <LiStyle>Ingresar</LiStyle>
+      </ul>
+    </NavBarStyle >
+  )
 }
