@@ -1,0 +1,72 @@
+nav {
+    border: 1px solid $color-principal;
+    border-left: none;
+    border-right: none;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #137796;
+
+    ul {
+        display: flex; //horizontal
+        flex-direction: row; //eje por el cual toma la direccion el flex
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+
+        li {
+            list-style: none;
+            color: #ffffff;
+            cursor: pointer;
+            padding-bottom: 5px;
+            padding-top: 5px;
+            border: 1px solid transparent;
+
+            &:hover {
+                border-color: white;
+                //font-weight: 700;
+                font-style: italic;
+            }
+        }
+    }
+}
+
+
+/*
+Componentes estilados
+
+import styled from 'styled-components';
+
+const LiStyle = styled.li`
+  list-style: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-bottom: 1px solid transparent;
+  &:hover {
+    border-color: white;
+    //font-weight: 700;
+    font-style: italic;
+  }
+`
+
+const NavBarStyle = styled.nav`
+  border: 1px solid #111555;
+  border-left: none; 
+  border-right: none;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #137796;
+
+  ul{
+    display: flex; //horizontal
+    flex-direction: row; //eje por el cual toma la direccion el flex
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    }
+  }
+  
+`*/
