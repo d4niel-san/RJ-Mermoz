@@ -39,7 +39,7 @@ const ResponsiveAppBar = () => {
     <AppBar position="static" color="primary" >
       <Container maxWidth="x1">
         <Toolbar disableGutters>
-        <Link to='/'>
+        
             <Typography
               variant="h6"
               noWrap
@@ -49,7 +49,7 @@ const ResponsiveAppBar = () => {
               
               MP Informatica
             </Typography>
-        </Link>
+        
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -88,7 +88,7 @@ const ResponsiveAppBar = () => {
             </Menu>
           </Box>
 
-          
+
           <Typography
             variant="h6"
             noWrap

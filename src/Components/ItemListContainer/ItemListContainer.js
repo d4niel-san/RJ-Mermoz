@@ -7,9 +7,13 @@ import { Item } from "../Item/Item"
 
 export const ItemListContainer = () => {
 
+    const [loading, setLoading] = useState(false)
     const [productos, setProductos] = useState([])
 
     useEffect(() => {
+
+        setLoading(true)
+
         pedirDatos()
             .then((res) => {
                 setProductos(res)
@@ -20,14 +24,18 @@ export const ItemListContainer = () => {
             })
             .finally(() => {
                 console.log('Productos Cargados')
+                setLoading(false)
             })
     }, [])
 
     return (
-        <Contenedor>
-            <div className="row">
-                {productos.map((el, i) => <Item key={i} {...el}/>)} 
-            </div> 
-        </Contenedor>
+        loading
+            ? <h3>Cargando...</h3>
+            :
+            <Contenedor>
+                <div className="row">
+                    {productos.map((el, i) => <Item key={i} {...el} />)}
+                </div>
+            </Contenedor>
     )
 }
