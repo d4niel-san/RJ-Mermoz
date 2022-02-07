@@ -11,6 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import { Link } from 'react-router-dom';
 
 const pages = ['Pagina Principal', 'Productos', 'Redes', 'Contacto', 'Ingresar'];
 const settings = ['Loguearse', 'Cuenta', 'Carrito', 'Desloguearse'];
@@ -38,14 +39,17 @@ const ResponsiveAppBar = () => {
     <AppBar position="static" color="primary" >
       <Container maxWidth="x1">
         <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
-          >
-            MP Informatica
-          </Typography>
+        <Link to='/'>
+            <Typography
+              variant="h6"
+              noWrap
+              component="div"
+              sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+            >
+              
+              MP Informatica
+            </Typography>
+        </Link>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -83,6 +87,8 @@ const ResponsiveAppBar = () => {
               ))}
             </Menu>
           </Box>
+
+          
           <Typography
             variant="h6"
             noWrap
