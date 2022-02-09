@@ -6,3 +6,31 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+
+body{
+    //background: radial-gradient(#7BCCB5,#fff);
+    background: radial-gradient($color-secundario, #fff);
+    font-family: 'Montserrat', sans-serif;
+}
+
+p{
+    color: $color-p;
+}
+
+a{
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

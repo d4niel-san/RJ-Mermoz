@@ -11,10 +11,12 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import { Link } from 'react-router-dom';
+import {Link}  from 'react-router-dom';
 
-const pages = ['Pagina Principal', 'Productos', 'Redes', 'Contacto', 'Ingresar'];
+
+const pages = ['Principal', 'Productos', 'Redes', 'Contacto', 'Ingresar'];
 const settings = ['Loguearse', 'Cuenta', 'Carrito', 'Desloguearse'];
+
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -36,20 +38,22 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static" color="primary" >
+    <AppBar position="static" color="primary">
       <Container maxWidth="x1">
         <Toolbar disableGutters>
-        
+        <Link to="/">
+
             <Typography
               variant="h6"
               noWrap
               component="div"
               sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
-            >
+              >
               
-              MP Informatica
+              Computek
             </Typography>
         
+        </Link>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -82,7 +86,12 @@ const ResponsiveAppBar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Link
+                    key={page}
+                    to={`/${page}`}                
+                  >
+                    <Typography textAlign="center">{page}</Typography>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -95,17 +104,18 @@ const ResponsiveAppBar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-            LOGO
+            Computek
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Button
+              <Link
                 key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                to={`/${page}`}                
               >
-                {page}
-              </Button>
+                <Button sx={{ my: 2, color: 'white', display: 'block' }}>
+                  {page}
+                </Button>
+              </Link>
             ))}
           </Box>
 

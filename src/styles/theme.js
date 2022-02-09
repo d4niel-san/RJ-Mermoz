@@ -1,4 +1,4 @@
-import { red, lightGreen } from "@mui/material/colors";
+import { red, lightGreen, orange } from "@mui/material/colors";
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
@@ -10,7 +10,7 @@ const theme = createTheme({
             main: '#d9d9d9',
         },
         error:{
-            main: red[100],
+            main: orange[100],
         },
         warning:{
             main: red[200],
