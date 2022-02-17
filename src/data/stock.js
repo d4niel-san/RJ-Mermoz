@@ -7,7 +7,7 @@ export const stock = [
         desc: 'descripcion producto 1',
         precio: 1600,
         img: 'https://via.placeholder.com/150',
-        stock: 50
+        stock: 10
     },
     {
         id: 2,
@@ -15,7 +15,7 @@ export const stock = [
         desc: 'descripcion producto 2',
         precio: 2600,
         img: 'https://via.placeholder.com/150',
-        stock: 250
+        stock: 10
     },
     {
         id: 3,
@@ -23,7 +23,7 @@ export const stock = [
         desc: 'descripcion producto 3',
         precio: 3600,
         img: 'https://via.placeholder.com/150',
-        stock: 25
+        stock: 10
     },
     {
         id: 4,
@@ -31,7 +31,7 @@ export const stock = [
         desc: 'descripcion producto 4',
         precio: 3600,
         img: 'https://via.placeholder.com/150',
-        stock: 25
+        stock: 10
     },
     {
         id: 5,
@@ -39,7 +39,7 @@ export const stock = [
         desc: 'descripcion producto 5',
         precio: 5600,
         img: 'https://via.placeholder.com/150',
-        stock: 25
+        stock: 10
     },
     {
         id: 6,
@@ -47,7 +47,7 @@ export const stock = [
         desc: 'descripcion producto 6',
         precio: 6600,
         img: 'https://via.placeholder.com/150',
-        stock: 25
+        stock: 10
     },
     {
         id: 7,
@@ -55,7 +55,7 @@ export const stock = [
         desc: 'descripcion producto 7',
         precio: 7600,
         img: 'https://via.placeholder.com/150',
-        stock: 25
+        stock: 10
     },
     {
         id: 8,
@@ -63,6 +63,6 @@ export const stock = [
         desc: 'descripcion producto 8',
         precio: 8600,
         img: 'https://via.placeholder.com/150',
-        stock: 25
+        stock: 10
     },
 ]

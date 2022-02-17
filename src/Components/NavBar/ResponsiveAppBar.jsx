@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import {Link}  from 'react-router-dom';
+import { CartWidget } from '../CartWidget/CartWidget';
 
 
 const pages = ['Principal', 'Productos', 'Redes', 'Contacto', 'Ingresar'];
@@ -118,6 +119,7 @@ const ResponsiveAppBar = () => {
               </Link>
             ))}
           </Box>
+            <CartWidget/>
 
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Ajustes">
