@@ -1,4 +1,33 @@
 
+/*
+const arr = [
+  {
+    id: 1,
+    nombre: 'producto 1',
+    cantidad: 1,
+  },
+  {
+    id: 2,
+    nombre: 'producto 2',
+    cantidad: 1,
+  },
+];
+
+//Encotnramos el objeto
+const obj = arr.find((elem) => elem.id === 1);
+console.log(obj);
+
+//Ahora le modificamos la cantidad
+const index = arr.indexOf(obj); //buscamos el indice en el array
+console.log(index);
+
+arr[index].cantidad = 3; //le agregamos la nueva cantidad
+console.log(arr);
+
+//En react para que funcione tienes que setear el estado de nuevo
+//setCart([...cart]) por ejemplo
+*/
+
 
 export const stock = [
     {

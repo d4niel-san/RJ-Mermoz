@@ -38,4 +38,6 @@ export const ItemListContainer = () => {
                 </div>
             </Contenedor>
     )
+
+    //return (loading && <Navigate to="/"/>)
 }
