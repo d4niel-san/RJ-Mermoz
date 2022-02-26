@@ -1,5 +1,7 @@
+import { collection, getDocs } from "firebase/firestore"
 import { useEffect, useState } from "react"
-import { pedirDatos } from "../../helpers/pedirDatos"
+import { useParams } from "react-router-dom"
+import { db } from "../../Firebase/Config"
 import { Contenedor } from "../Contenedor/Contenedor"
 import { Item } from "../Item/Item"
 
@@ -14,18 +16,34 @@ export const ItemListContainer = () => {
 
         setLoading(true)
 
-        pedirDatos()
-            .then((res) => {
-                setProductos(res)
-                console.log(res)
+        //1. Armo referencia
+        const productosRef = collection(db, 'productos');
+        //2. Pedir Referencia
+        getDocs(productosRef)
+            .then((resp) => {
+                setProductos(resp.docs.map((doc) => {
+                    return {
+                        id: doc.id,
+                        ...doc.data()
+                    }
+                }))
             })
-            .catch((err) => {
-                console.log(err)
+            .finally(() => {
+                setLoading(false)
+                console.log(productos)
             })
+        /*pedirDatos()
+        .then((res) => {
+            setProductos(res)
+            console.log(res)
+        })
+        .catch((err) => {
+            console.log(err)
+        })
             .finally(() => {
                 console.log('Productos Cargados')
                 setLoading(false)
-            })
+            })*/
     }, [])
 
     return (
