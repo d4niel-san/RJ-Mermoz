@@ -32,18 +32,6 @@ export const ItemListContainer = () => {
                 setLoading(false)
                 console.log(productos)
             })
-        /*pedirDatos()
-        .then((res) => {
-            setProductos(res)
-            console.log(res)
-        })
-        .catch((err) => {
-            console.log(err)
-        })
-            .finally(() => {
-                console.log('Productos Cargados')
-                setLoading(false)
-            })*/
     }, [])
 
     return (

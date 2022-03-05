@@ -6,7 +6,6 @@ export const Item = ( {id, nombre, precio, img, desc}) => {
 
 return (
   <Card style={{ width: '15rem', margin: '12px' }}>
-    {console.log(Item)};
     <Card.Img variant="top" src={img} />
     <Card.Body>
       <Card.Title>{nombre}</Card.Title>
