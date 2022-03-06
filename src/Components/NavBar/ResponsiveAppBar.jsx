@@ -15,7 +15,7 @@ import {Link}  from 'react-router-dom';
 import { CartWidget } from '../CartWidget/CartWidget';
 
 
-const pages = ['Principal', 'Productos', 'Redes', 'Contacto', 'Ingresar'];
+const pages = ['MotherBoard', 'Memoria RAM', 'Disco Rigido', 'Fuente'];
 const settings = ['Loguearse', 'Cuenta', 'Carrito', 'Desloguearse'];
 
 
@@ -85,11 +85,12 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
+              
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Link
                     key={page}
-                    to={`/${page}`}                
+                    to={`/productos/${page}`}                
                   >
                     <Typography textAlign="center">{page}</Typography>
                   </Link>
@@ -98,20 +99,21 @@ const ResponsiveAppBar = () => {
             </Menu>
           </Box>
 
-
+          <Link to="/">
           <Typography
             variant="h6"
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
           >
-            Computek
+              
           </Typography>
+          </Link>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Link
                 key={page}
-                to={`/${page}`}                
+                to={`/productos/${page}`}                
               >
                 <Button sx={{ my: 2, color: 'white', display: 'block' }}>
                   {page}
